@@ -8,29 +8,28 @@ public abstract class Animal {
     private int posicaoY;
 
     public Animal(String nome, int quantidadeDePatas){
-        this.quantidadeDePatas = quantidadeDePatas;
         this.nome = nome;
+        this.quantidadeDePatas = quantidadeDePatas;
         this.posicaoX = 0;
         this.posicaoY = 0;
     }
 
     public abstract void andar();
 
-    protected void alterarPosicao(int passoEmX, int passoEmY){
+    protected void alteraposicao(int passoEmX, int passoEmY){
         this.posicaoX += passoEmX;
         this.posicaoY += passoEmY;
     }
 
     public void fazerBarulho(){
-        //System.out.println("O animal não faz barulho");
-        System.out.println("O animal fez barulho: ");
+        System.out.println("O animal faz barulho:");
     }
-
+    
     public final void morrer(){
-        System.out.println("O animal morreu");
+        System.out.println("O animal morreu. ");
     }
 
-    //Metodos getter e setter
+    //metodos especiais getter e setter.
     public int getQuantidadeDePatas() {
         return quantidadeDePatas;
     }
@@ -62,10 +61,10 @@ public abstract class Animal {
     public void setPosicaoY(int posicaoY) {
         this.posicaoY = posicaoY;
     }
-
+    
     public String toString(){
-        String informacao = String.format("%s (X: %d, Y: %d)", 
-            this.nome, this.posicaoX, this.posicaoY);
+        String informacao = String.format("%s (X: %d, Y: %d).", 
+            this.nome, this.posicaoX, this.getPosicaoY());
         return informacao;
     }
     

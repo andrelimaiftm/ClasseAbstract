@@ -1,7 +1,7 @@
 package br.edu.iftm.classefinal.classes;
 
 public final class Matematica {
-
+    
     public int somar(int... valores){
         int resultado = 0;
         for (int valor : valores) {
@@ -9,5 +9,4 @@ public final class Matematica {
         }
         return resultado;
     }
-    
 }
