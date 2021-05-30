@@ -62,10 +62,20 @@ public abstract class Animal {
         this.posicaoY = posicaoY;
     }
     
+    //toString
     public String toString(){
         String informacao = String.format("%s (X: %d, Y: %d).", 
             this.nome, this.posicaoX, this.getPosicaoY());
         return informacao;
+    }
+    
+    //toString. boolean
+    public String toString(boolean podeImprimirCoordenadas){
+        if(podeImprimirCoordenadas){
+            return this.toString();
+        }else{
+            return nome;
+        }
     }
     
 }
